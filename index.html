@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Розыгрыш геометрического стандартного дискретного распределения
+    </title>
+    <style>
+      body {
+        background-color: darkgray;
+        font-size: 18px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      label,
+      input {
+        cursor: pointer;
+      }
+      label {
+        font-weight: 600;
+      }
+      input[type="button"] {
+        padding: 5px;
+        font-size: 15px;
+        border-radius: 4px;
+      }
+      .count-input,
+      .sourse-vertex {
+        width: 50px;
+        padding: 4px;
+        font-size: 15px;
+        background-color: honeydew;
+        border: unset;
+        border-radius: 4px;
+        outline: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      Розыгрыш геометрического стандартного дискретного распределения с
+      вероятностью успеха p=0.85
+    </h2>
+    <label class="count-lable" for="count"
+      >Введите количество разыгранных значений:
+    </label>
+    <input class="count-input" id="count" type="text" value="100" />
+    <input class="count-button" type="button" value="Выполнить розыгрыш" />
+    <p>Дискретный вариационный ряд (результаты розыгрыша):</p>
+    <p></p>
+    <table id="resultsTable"></table>
+    <p>Таблица частот выпадения:</p>
+    <table id="frequencyTable">
+      <tr>
+        <th>Случайная величина</th>
+        <th>Количество</th>
+        <th>Вероятность</th>
+        <th>Значение функции распределения</th>
+      </tr>
+    </table>
+    <p>Гистограмма распределения разыгранных значений:</p>
+    <canvas id="frequencyHistogram"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
